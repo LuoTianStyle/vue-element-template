@@ -53,9 +53,6 @@ module.exports = {
       'after': true
     }],
     'handle-callback-err': [2, '^(err|error)$'],
-    'indent': [2, 4, {
-      'SwitchCase': 1
-    }],
     'jsx-quotes': [2, 'prefer-single'],
     'key-spacing': [2, {
       'beforeColon': false,
@@ -166,7 +163,6 @@ module.exports = {
       'avoidEscape': true,
       'allowTemplateLiterals': true
     }],
-    'semi': [2, 'never'],
     'semi-spacing': [2, {
       'before': false,
       'after': true
@@ -193,6 +189,14 @@ module.exports = {
     'object-curly-spacing': [2, 'always', {
       objectsInObjects: false
     }],
-    'array-bracket-spacing': [2, 'never']
+    'array-bracket-spacing': [2, 'never'],
+    'vue/html-indent': ['error', 4],
+    'indent': [2, 4, {
+        'SwitchCase': 1
+      }],
+    'semi': [2, 'always'],
+    'max-len': [2, {
+        code: 180
+      }],
   }
 }

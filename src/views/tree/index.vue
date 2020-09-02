@@ -1,17 +1,17 @@
 <template>
-  <div class="app-container">
-    <el-input v-model="filterText" placeholder="Filter keyword" style="margin-bottom:30px;" />
+    <div class="app-container">
+        <el-input v-model="filterText" placeholder="Filter keyword" style="margin-bottom:30px;" />
 
-    <el-tree
-      ref="tree2"
-      :data="data2"
-      :props="defaultProps"
-      :filter-node-method="filterNode"
-      class="filter-tree"
-      default-expand-all
-    />
+        <el-tree
+            ref="tree2"
+            :data="data2"
+            :props="defaultProps"
+            :filter-node-method="filterNode"
+            class="filter-tree"
+            default-expand-all
+        />
 
-  </div>
+    </div>
 </template>
 
 <script>
@@ -59,20 +59,20 @@ export default {
                 children: 'children',
                 label: 'label'
             }
-        }
+        };
     },
     watch: {
         filterText(val) {
-            this.$refs.tree2.filter(val)
+            this.$refs.tree2.filter(val);
         }
     },
 
     methods: {
         filterNode(value, data) {
-            if (!value) return true
-            return data.label.indexOf(value) !== -1
+            if (!value) return true;
+            return data.label.indexOf(value) !== -1;
         }
     }
-}
+};
 </script>
 
